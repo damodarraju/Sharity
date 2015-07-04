@@ -7,11 +7,11 @@ class CharitiesController < ApplicationController
     @charities = Charity.all
     category_group = params[:category_group].split(',') if params[:category_group]
     category_group ||= []
-    @charities = @charities.where("? <> 'f'", params[:category]) if params[:category].present?
+    @charities = @charities.where("#{params[:category]} is null") if params[:category].present?
     @charities = @charities.where(charity_size: params[:charity_size]) if params[:charity_size].present?
     @charities = @charities.where(state: params[:state]) if params[:state].present?
     category_group.each do |category|
-      @charities = @charities.where("? <> 'f'", category)
+      @charities = @charities.where("#{category} is null")
     end
     @charities = @charities.page params[:page]
   end

@@ -23,7 +23,7 @@
 
 
   body {
-  background: rgb(161, 34, 34);
+  background: url(img/Image_2.jpg);
 }
 
   .Sharity {
@@ -36,25 +36,39 @@
   }
   .Business {
 
-  font-family: inherit;
-  line-height: inherit;
+  /*font-family: inherit;*/
+  /*line-height: inherit;*/
   text-align: -webkit-center;
-  font-size: x-large;
+  /*font-size: x-large;*/
   }
   .Personal {
 
-  font-family: inherit;
-  line-height: inherit;
+  /*font-family: inherit;
+  line-height: inherit;*/
   text-align: -webkit-center;
-  font-size: x-large;
+  /*font-size: x-large;*/
   }
+
   .Map {
 
-  font-family: inherit;
-  line-height: inherit;
+  /*font-family: inherit;
+  line-height: inherit;*/
   text-align: -webkit-center;
-  font-size: x-large;
+  /*font-size: x-large;*/
   }
+  .Image {
+    text-align: center;
+  }
+  .btn-default {
+    text-align: -webkit-center;
+    color: #CDA7A7;
+    background-color: #767B7C;
+    border-color: #251010;
+    padding: 1.7em 5% 1.7em 5%;
+    line-height: 1;
+    margin: 4px;
+}
+
 
 
 
@@ -70,18 +84,21 @@
 <body>
 
 <header>
-   <div class=Sharity> Sharity
-   </div>
+  <div class= "Image">
+<img src="img/uSharity-3.png" alt="logo">
+</div>
 </header>
+
 <div class= "Business">
-  <button onclick="window.location.href='file:///Users/raju/Desktop/Sharity/business.html'">Business</button>
+  <a class="btn btn-default" href="file:///Users/raju/Desktop/Sharity/Business.html" role="button"><h1>Business</h1></a>
 </div>
 <div class= "Personal">
-  <button onclick="window.location.href='file:///Users/raju/Desktop/Sharity/Personal.html'">Personal</button>
+  <a class="btn btn-default" href="file:///Users/raju/Desktop/Sharity/Personal.html" role="button"><h1>Personal</h1></a>
 </div>
 <div class= "Map">
-  <button onclick="window.location.href='http://www.nationalmap.gov.au'">Map</button>
+  <a class="btn btn-default" href="http://www.nationalmap.com.au" role="button"><h1>Map</h1></a>
 </div>
+
 
 
 

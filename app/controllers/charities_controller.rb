@@ -4,7 +4,11 @@ class CharitiesController < ApplicationController
   # GET /charities
   # GET /charities.json
   def index
-    @charities = Charity.page params[:page]
+    @charities = Charity.all
+    @charities = @charities.where("? <> 'f'", params[:category]) if params[:category].present?
+    @charities = @charities.where(charity_size: params[:charity_size]) if params[:charity_size].present?
+    @charities = @charities.where(state: params[:state]) if params[:state].present?
+    @charities = @charities.page params[:page]
   end
 
   # GET /charities/1

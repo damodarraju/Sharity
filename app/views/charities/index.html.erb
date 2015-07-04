@@ -4,15 +4,21 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Website</th>
+      <th>Size</th>
     </tr>
   </thead>
 
   <tbody>
     <% @charities.each do |charity| %>
       <tr>
-        <td><%= charity.charity_legal_name %></td>
-        <td><%= charity.charity_website %></td>
+        <td>
+          <% if charity.charity_website %>
+            <a href=http://<%= charity.charity_website %> target='_blank'><%= charity.charity_legal_name %></a>
+          <% else %>
+            <%= charity.charity_legal_name %>
+          <% end %>
+        </td>
+        <td><%= charity.charity_size %></td>
       </tr>
     <% end %>
   </tbody>
@@ -20,5 +26,8 @@
 
 <br>
 
-<%= link_to 'New Charity', new_charity_path %>
 <%= paginate @charities %>
+<%= page_entries_info @charities %>
+
+<br/>
+<a href="/Business.html">Back</a>

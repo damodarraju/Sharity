@@ -4,7 +4,7 @@ class CharitiesController < ApplicationController
   # GET /charities
   # GET /charities.json
   def index
-    @charities = Charity.all
+    @charities = Charity.page params[:page]
   end
 
   # GET /charities/1

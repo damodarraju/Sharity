@@ -1,7 +1,7 @@
 class CreateCharity < ActiveRecord::Migration
   def change
     create_table :charities do |t|
-      t.integer :abn
+      t.integer :abn, limit: 8
       t.string :charity_legal_name
       t.string :other_organisation_names
       t.string :operating_countries

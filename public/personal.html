@@ -23,7 +23,6 @@
     background-color: darkgoldenrod;
 }
 
-
 * {
   margin: 0;
 }
@@ -69,7 +68,7 @@ html {
 }
 
   </style>
-                                         <!-- HTML -->
+<!-- HTML -->
   </head>
 <body>
 <div class= "Image">
@@ -77,9 +76,10 @@ html {
 </div>
 
 <div class= "Business">
+  <form action="/charities">
                     <div class="PanelField">
-                      <input name="ctl00$TemplateBody$WebPartManager1$gwpciNewQueryMenuCommon2$ciNewQueryMenuCommon2$ResultsGrid$Sheet0$ctl21" type="hidden" value="10194c20-5f81-4321-89e0-705ced655237.FS1.FL43"><label for="ctl00_TemplateBody_WebPartManager1_gwpciNewQueryMenuCommon2_ciNewQueryMenuCommon2_ResultsGrid_Sheet0_Input5">States of operation</label><div class="PanelFieldValue">
-                        <span id="ctl00_TemplateBody_WebPartManager1_gwpciNewQueryMenuCommon2_ciNewQueryMenuCommon2_ResultsGrid_Sheet0_Input5"><span style="white-space:nowrap;"><select name="ctl00$TemplateBody$WebPartManager1$gwpciNewQueryMenuCommon2$ciNewQueryMenuCommon2$ResultsGrid$Sheet0$Input5$DropDown1" id="ctl00_TemplateBody_WebPartManager1_gwpciNewQueryMenuCommon2_ciNewQueryMenuCommon2_ResultsGrid_Sheet0_Input5_DropDown1">
+                      <label for="ctl00_TemplateBody_WebPartManager1_gwpciNewQueryMenuCommon2_ciNewQueryMenuCommon2_ResultsGrid_Sheet0_Input5">States of operation</label><div class="PanelFieldValue">
+                        <span id="ctl00_TemplateBody_WebPartManager1_gwpciNewQueryMenuCommon2_ciNewQueryMenuCommon2_ResultsGrid_Sheet0_Input5"><span style="white-space:nowrap;"><select name="state" id="ctl00_TemplateBody_WebPartManager1_gwpciNewQueryMenuCommon2_ciNewQueryMenuCommon2_ResultsGrid_Sheet0_Input5_DropDown1">
                           <option selected="selected" value="">(Any)</option>
                           <option value="ACT">Australian Capital Territory</option>
                           <option value="NSW">New South Wales</option>
@@ -94,27 +94,31 @@ html {
                     </div>
                     </div>
 
+                    <input id="category_group" name='category_group' type="hidden"/>
+                    <input id="category" name='category' type="hidden"/>
 <div class="catagories">
   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 centered">
-    <button type="button" class="btn btn-default btn-lg"><i class="fa fa-graduation-cap"></i> Education</button>
+    <button type="button" class="btn btn-default btn-lg" onclick="$('#category').val('advancing_education');this.form.submit()"><i class="fa fa-graduation-cap"></i> Education</button>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 centered">
-    <button type="button" class="btn btn-default btn-lg"><i class='fa fa-heartbeat'></i> Health</button>
+    <button type="button" class="btn btn-default btn-lg" onclick="$('#category_group').val('advancing_health,promoting_or_protecting_human_rights');this.form.submit()"><i class="fa fa-heartbeat"></i> Health</button>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 centered">
-    <button type="button" class="btn btn-default btn-lg"><i class='fa fa-leaf'></i> Natural Environment</button>
+    <button type="button" class="btn btn-default btn-lg" onclick="$('#category').val('advancing_natual_environment');this.form.submit()"><i class="fa fa-leaf"></i> Natural Environment</button>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 centered">
-    <button type="button" class="btn btn-default btn-lg"><i class='fa fa-book'></i> Religion</button>
+    <button type="button" class="btn btn-default btn-lg" onclick="$('#category').val('advancing_religion');this.form.submit()"><i class="fa fa-book"></i> Religion</button>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 centered">
-    <button type="button" class="btn btn-default btn-lg"><i class='fa fa-gavel'></i> Law and Human Rights</button>
+    <button type="button" class="btn btn-default btn-lg" onclick="$('#category_group').val('promote_or_oppose_a_change_to_law__government_poll_or_prac,promoting_or_protecting_human_rights,advancing_security_or_safety_of_australia_or_australian_public');this.form.submit()"><i class="fa fa-gavel"></i> Law and Human Rights</button>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 centered">
-    <button type="button" class="btn btn-default btn-lg"><i class='fa fa-users'></i>Economy,Social and Community</button>
+    <button type="button" class="btn btn-default btn-lg" onclick="$('#category_group').val('advancing_social_or_public_welfare');this.form.submit()"><i class="fa fa-users"></i> Economy,Social and Community</button>
   </div>
 </div>
 </div>
+</form>
+<a href="/Sharity.html">Home</a>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

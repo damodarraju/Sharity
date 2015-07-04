@@ -3,7 +3,7 @@ class CreateCharity < ActiveRecord::Migration
     create_table :charities do |t|
       t.integer :abn, limit: 8
       t.string :charity_legal_name
-      t.string :other_organisation_names
+      t.text :other_organisation_names
       t.string :operating_countries
       t.string :address_type
       t.string :address_line_1

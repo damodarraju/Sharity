@@ -13,10 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20150704035953) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "charities", force: true do |t|
-    t.integer  "abn"
+    t.integer  "abn",                                                            limit: 8
     t.string   "charity_legal_name"
-    t.string   "other_organisation_names"
+    t.text     "other_organisation_names"
     t.string   "operating_countries"
     t.string   "address_type"
     t.string   "address_line_1"

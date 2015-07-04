@@ -41,3 +41,4 @@ gem 'spring',        group: :development
 gem "twitter-bootstrap-rails"
 gem 'pg'
 gem 'rails_12factor'
+gem 'kaminari'

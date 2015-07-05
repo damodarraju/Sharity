@@ -13,7 +13,8 @@ class CharitiesController < ApplicationController
     category_group.each do |category|
       @charities = @charities.where("#{category} is null")
     end
-    @charities = @charities.page params[:page]
+    @charities = @charities.where("charity_website is not null")
+    @charities = @charities.offset(rand(@charities.count)).limit(5)
   end
 
   # GET /charities/1

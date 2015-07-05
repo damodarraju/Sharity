@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+<div class="container-fluid" style='text-align: center'>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-3 col-md-offset-3">
+      <h1>Listing charities</h1>
+      <table>
+        <!--
+          <thead>
+          <tr>
+          <th>Name</th>
+          </tr>
+          </thead>
+        -->
+
+        <tbody>
+          <% @charities.each do |charity| %>
+            <tr>
+              <td>
+                <% if charity.charity_website %>
+                  <a href=http://<%= charity.charity_website %> target='_blank'><%= charity.charity_legal_name %></a>
+                <% else %>
+                  <%= charity.charity_legal_name %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+=======
 <div class="container-fluid">
 
   <div style='text-align:center'>
@@ -81,6 +113,7 @@
         </tbody>
       </table>
 
+>>>>>>> 8d4fe3b5367a43aefe047875948bf81798411486
       <br>
       <br/>
       <a href="javascript:history.back()">Back</a>

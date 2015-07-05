@@ -68,7 +68,7 @@
               <td>
                 *
                 <% if charity.charity_website %>
-                  <a href=http://<%= charity.charity_website %> target='_blank'><%= charity.charity_legal_name %></a>
+                  <a href=http://<%= charity.charity_website %> target='_blank' style='color: #fff; font-weight: bold;'><%= charity.charity_legal_name %></a>
                 <% else %>
                   <%= charity.charity_legal_name %>
                 <% end %>
@@ -83,7 +83,7 @@
 
       <br>
       <br/>
-      <a href="javascript:history.back()">Back</a>
+      <a href="javascript:history.back()" style='color: #fff; font-weight: bold;'>Back</a>
     </div>
   </div>
 </div>

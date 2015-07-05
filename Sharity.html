@@ -59,16 +59,20 @@
   .Image {
     text-align: center;
   }
-  .btn-default {
-    text-align: -webkit-center;
-    color: #CDA7A7;
-    background-color: #767B7C;
-    border-color: #251010;
-    padding: 1.7em 5% 1.7em 5%;
-    line-height: 1;
-    margin: 4px;
-}
-
+  .btn-block+.btn-block {
+    margin-top: 5px;
+    padding: 2.7em 5% 2.7em 5%;
+  }
+  .btn-block {
+    display: block;
+    width: 100%;
+    padding: 4.7em 5% 4.7em 5%;
+  }
+  .col-lg-12 {
+    width: 33.33333333%;
+    padding: 3.7em 3% 5.7em 15%;
+      margin: -35px;
+  }
 
 
 
@@ -89,17 +93,20 @@
 </div>
 </header>
 
-<div class= "Business">
-  <a class="btn btn-default" href="file:///Users/raju/Desktop/Sharity/Business.html" role="button"><h1>Business</h1></a>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centered">
+<button type="button" href="file:///Users/raju/Desktop/Sharity/Business.html" class="btn btn-primary btn-lg btn-block">Business</button>
 </div>
-<div class= "Personal">
-  <a class="btn btn-default" href="file:///Users/raju/Desktop/Sharity/Personal.html" role="button"><h1>Personal</h1></a>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centered">
+<button type="button" href="file:///Users/raju/Desktop/Sharity/Personal.html" class="btn btn-default btn-lg btn-block">Personal</button>
 </div>
-<div class= "Map">
-  <a class="btn btn-default" href="http://www.nationalmap.com.au" role="button"><h1>Map</h1></a>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centered">
+<button type="button" href="http://www.nationalmap.com.au" class="btn btn-primary btn-lg btn-block">Map</button>
 </div>
 
 
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="damodarraju" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 
 

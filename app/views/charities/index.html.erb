@@ -51,9 +51,10 @@
     </div>
   </div>
 
-  <div class="row">
+  <br/>
+  <div class="row" style='background: rgb(54, 25, 25); background: rgba(54, 25, 25, .5);'>
     <div class="col-md-5 col-md-offset-4">
-      <h1>Listing charities</h1>
+      <h1 style='color:#fff'>Listing Charities</h1>
       <table>
         <!--
           <thead>
@@ -67,9 +68,8 @@
           <% @charities.each do |charity| %>
             <tr>
               <td>
-                *
                 <% if charity.charity_website %>
-                  <a href=http://<%= charity.charity_website %> target='_blank' style='color: #fff; font-weight: bold;'><%= charity.charity_legal_name %></a>
+                  <a href=http://<%= charity.charity_website %> target='_blank' style='color: #fff; font-weight: bold;'>* <%= charity.charity_legal_name %></a>
                 <% else %>
                   <%= charity.charity_legal_name %>
                 <% end %>
@@ -83,8 +83,12 @@
       </table>
 
       <br>
-      <br/>
-      <a href="javascript:history.back()" style='color: #fff; font-weight: bold;'>Back</a>
+      <button class='btn btn-primary'>Give me More!</button> |
+      <a href="/Sharity.html" style='color: #fff; font-weight: bold;'>Home</a>
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
   </div>
 </div>

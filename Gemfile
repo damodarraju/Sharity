@@ -42,3 +42,5 @@ gem "twitter-bootstrap-rails"
 gem 'pg'
 gem 'rails_12factor'
 gem 'kaminari'
+gem 'quiet_assets'
+gem 'better_errors'
